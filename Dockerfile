@@ -19,13 +19,11 @@ RUN npm run build --configuration=production
 # Bước 2: Sử dụng hình ảnh Nginx để phục vụ ứng dụng
 FROM nginx:alpine
 
-RUN rm -rf /usr/share/nginx/html/*
+# Sao chép file cấu hình Nginx vào hình ảnh
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Sao chép file build từ build stage vào thư mục phục vụ của Nginx
 COPY --from=build /app/dist/app-bot1992 /usr/share/nginx/html
-
-# Sao chép file cấu hình Nginx vào hình ảnh
-COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
