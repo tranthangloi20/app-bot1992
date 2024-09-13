@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: app-bot1992
+    env: docker
+    buildCommand: "docker build -t app-bot1992 ."
+    startCommand: "docker run -p 80:80 app-bot1992"
+    plan: free
