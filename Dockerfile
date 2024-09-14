@@ -22,6 +22,9 @@ FROM nginx:alpine
 # Sao chép file cấu hình Nginx vào hình ảnh
 COPY nginx.conf /etc/nginx/nginx.conf
 
+# Clears the static files
+RUN rm -rf /usr/share/nginx/html
+
 # Sao chép file build từ build stage vào thư mục phục vụ của Nginx
 COPY --from=build /app/dist/app-bot1992 /usr/share/nginx/html
 
