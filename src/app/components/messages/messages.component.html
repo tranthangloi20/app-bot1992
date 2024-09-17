@@ -1,0 +1,11 @@
+<div class="messages-wrapper">
+    <div>
+        @for (item of messages; track item) {
+            {{ item }}
+        } @empty {
+            No items
+        }
+    </div>
+    <a class="b-link" (click)="clear()">Clear</a>
+    <a class="b-link" (click)="send()">Send</a>
+</div>

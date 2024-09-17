@@ -2,4 +2,25 @@
 body {
     background-color: #15181e;
     color: white;
+    font-size: 18px;
+}
+
+a.b-link {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin-right: 5px;
+    cursor: pointer;
+
+    &:hover {
+        color: #2980b9;
+        text-decoration: underline;
+    }
+    &:visited {
+        color: #8e44ad;
+    }
+    &:active {
+        color: #e74c3c;
+    }
 }

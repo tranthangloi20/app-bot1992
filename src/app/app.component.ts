@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
 })
 
 export class AppComponent {
-  title = 'app-bot1992';
+  title = 'Bot1992';
 }

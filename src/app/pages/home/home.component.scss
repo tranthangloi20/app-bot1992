@@ -1,0 +1,10 @@
+.home-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    .column {    
+       
+    }
+}

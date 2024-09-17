@@ -1,0 +1,57 @@
+<div class="home-wrapper">
+    <div class="column"> Something
+        <app-buy-sell></app-buy-sell>
+    </div>
+    <div class="column">
+        <app-messages></app-messages>
+    </div>
+    <div class="column">
+        <div *ngFor="let coin of coins">
+            <p>{{ coin.symbol }}: {{ coin.price }}</p>
+        </div>
+    </div>
+    <div class="column">
+        Auto Trade: yes / no
+        <table>
+            <tbody>
+                <tr>
+                    <td>#BTC:</td>
+                    <td>
+                        <p *ngIf="price$ | async as price; else loading" [style.color]="direction$ | async">
+                            {{price}}
+                        </p>
+                    </td>
+                    <td>
+                        <input type="number" value="100" style="width: 45px;">
+                        <a>Buy</a> / 
+                        <a>Sell</a>
+                    </td>
+                </tr>
+                
+                @for (item of [{},{},{},{}]; track item) {
+                    <tr>
+                        <td>#ETH:</td>
+                        <td>
+                            59900
+                        </td>
+                        <td>
+                            <input type="number" value="100" style="width: 45px;">
+                            <a>Buy</a> / 
+                            <a>Sell</a>
+                        </td>
+                    </tr>
+                } @empty {
+                    <tr>
+                        <td colspan="100">No items</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<ng-template #loading>
+    <p>...</p>
+</ng-template>

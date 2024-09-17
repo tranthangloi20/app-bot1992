@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent, SignalComponent } from './components/index';
+import { HomeComponent, SignalComponent } from './pages/index';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },

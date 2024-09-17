@@ -1,0 +1,8 @@
+{
+    "/api": {
+        "target": "https://testnet.binance.vision",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
